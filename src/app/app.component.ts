@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   async fetchPublicData(){
-    await fetch("http://api.projectparadox.in/auth/public").then((response: Response) => {})
+    await fetch("http://api.projectparadox.in:8080/auth/public").then((response: Response) => {})
     console.log("data fetched");
   }
 
