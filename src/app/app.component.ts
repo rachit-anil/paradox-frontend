@@ -42,6 +42,11 @@ export class AppComponent implements OnInit {
     private spinnerService: SpinnerService
   ) {}
 
+  async fetchPublicData(){
+    await fetch("http://api.projectparadox.in/auth/public").then((response: Response) => {})
+    console.log("data fetched");
+  }
+
   ngOnInit() {
     // this.spinnerService.spinnerStatus.subscribe(spinnerData => {
     //   this.showSpinner = spinnerData.showSpinner;
