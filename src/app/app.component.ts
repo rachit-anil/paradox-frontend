@@ -48,7 +48,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // commented code
     // this.spinnerService.spinnerStatus.subscribe(spinnerData => {
     //   this.showSpinner = spinnerData.showSpinner;
     //   this.spinnerText = spinnerData.message || '';
