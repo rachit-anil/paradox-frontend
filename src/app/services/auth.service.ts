@@ -55,6 +55,9 @@ export class AuthService {
                 headers,
                 withCredentials: true,
             });
+
+        // return this.http
+        //     .get(`${apiUrl}/auth/login`);
     }
 
     registerUser(registerData: any) {
