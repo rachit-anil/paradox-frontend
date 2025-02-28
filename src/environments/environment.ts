@@ -1,5 +1,5 @@
 // src/environments/environment.ts
 export const environment = {
     production: false,
-    baseUrl: 'http://localhost:8080'  // Development URL
+    baseUrl: 'https://api.projectparadox.in'  // Development URL
 };
