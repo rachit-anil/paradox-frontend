@@ -44,20 +44,20 @@ export class AuthService {
         });
     }
 
-    loginUser(email: string, password: string) {
+    loginUser(username: string, password: string) {
         // return this.http.post(`${apiUrl}/auth/login`, {email, password});
-        const basicAuthHeader = "Basic " + btoa(email + ":" + password);
+        const basicAuthHeader = "Basic " + btoa(username + ":" + password);
         const headers = new HttpHeaders({
             Authorization: basicAuthHeader,
         });
-        return this.http
-            .get(`${apiUrl}/auth/login`, {
-                headers,
-                withCredentials: true,
-            });
-
         // return this.http
-        //     .get(`${apiUrl}/auth/login`);
+        //     .get(`${apiUrl}/auth/login`, {
+        //         headers,
+        //         withCredentials: true,
+        //     });
+
+        return this.http
+            .post(`${apiUrl}/auth/login`,{username, password});
     }
 
     registerUser(registerData: any) {
